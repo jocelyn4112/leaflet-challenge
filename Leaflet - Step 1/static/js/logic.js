@@ -56,5 +56,5 @@ function createMarkers(response) {
 }
 
 
-// Perform an API call to the Citi Bike API to get station information. Call createMarkers when complete
-d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json", createMarkers);
+// Perform an API call to the Earthquake API to get station information. Call createMarkers when complete
+d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson", createMarkers);
