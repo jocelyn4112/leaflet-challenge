@@ -1,4 +1,4 @@
-function createMap(bikeStations) {
+function createMap(earthQuakes) {
 
   // Create the tile layer that will be the background of our map
   var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -13,7 +13,7 @@ function createMap(bikeStations) {
     "Light Map": lightmap
   };
 
-  // Create an overlayMaps object to hold the bikeStations layer
+  // Create an overlayMaps object to hold the quake layer
   var overlayMaps = {
     "Earthquakes": earthQuakes
   };
@@ -33,26 +33,33 @@ function createMap(bikeStations) {
 
 function createMarkers(response) {
 
-  // Pull the "stations" property off of response.data
-  var stations = response.data.stations;
+  // Pull the quarkes off of response.data
+  //var stations = response.data.stations;
+  var equakes = response.data.equakes;
 
   // Initialize an array to hold bike markers
-  var bikeMarkers = [];
+  //var bikeMarkers = [];
+  var quakeMarkers = [];
 
   // Loop through the stations array
-  for (var index = 0; index < stations.length; index++) {
-    var station = stations[index];
+  // for (var index = 0; index < stations.length; index++) {
+  //   var station = stations[index];
+    for (var index = 0; index < equakes.length; index++) {
+      var equake = equakes[index];
 
     // For each station, create a marker and bind a popup with the station's name
-    var bikeMarker = L.marker([station.lat, station.lon])
-      .bindPopup("<h3>" + station.name + "<h3><h3>Capacity: " + station.capacity + "</h3>");
+    // var bikeMarker = L.marker([station.lat, station.lon])
+    //   .bindPopup("<h3>" + station.name + "<h3><h3>Capacity: " + station.capacity + "</h3>");
+      var quakeMarker = L.marker([equake.lat, equake.lon])
+      .bindPopup("<h3>" + equake.name + "<h3><h3>Capacity: " + equake.capacity + "</h3>");
 
     // Add the marker to the bikeMarkers array
-    bikeMarkers.push(bikeMarker);
-  }
+    // bikeMarkers.push(bikeMarker);
+    quakeMarkers.push(quakeMarker);
+  } 
 
   // Create a layer group made from the bike markers array, pass it into the createMap function
-  createMap(L.layerGroup(bikeMarkers));
+  createMap(L.layerGroup(quakeMarkers));
 }
 
 
