@@ -90,7 +90,7 @@ var icons = {
   })
 };
 
-// Perform an API call to the Citi Bike Station Information endpoint
+// Perform an API call to the Earthquate Information endpoint
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson", function(infoRes) {
 
   // When the first API call is complete, perform another call to the Citi Bike Station Status endpoint
