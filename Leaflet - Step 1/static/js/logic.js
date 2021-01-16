@@ -58,6 +58,8 @@ function createMarkers(response) {
     quakeMarkers.push(quakeMarker);
   } 
 
+  
+
   // Create a layer group made from the bike markers array, pass it into the createMap function
   createMap(L.layerGroup(quakeMarkers));
 }

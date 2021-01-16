@@ -5,7 +5,7 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
   id: "light-v10",
   accessToken: API_KEY
 });
-
+//NEED TO BRING IN THE MAG - HOW TO SORT BY COLOR AND SIZE
 // Initialize all of the LayerGroups we'll be using
 var layers = {
   COMING_SOON: new L.LayerGroup(),
@@ -14,7 +14,7 @@ var layers = {
   NORMAL: new L.LayerGroup(),
   OUT_OF_ORDER: new L.LayerGroup()
 };
-
+//Tyoes of mags
 // Create the map with our layers
 var map = L.map("map-id", {
   center: [40.73, -74.0059],
@@ -91,7 +91,7 @@ var icons = {
 };
 
 // Perform an API call to the Citi Bike Station Information endpoint
-d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json", function(infoRes) {
+d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson", function(infoRes) {
 
   // When the first API call is complete, perform another call to the Citi Bike Station Status endpoint
   d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_status.json", function(statusRes) {
