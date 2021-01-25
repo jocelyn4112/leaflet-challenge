@@ -3,7 +3,7 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
   id: "light-v10",
-  accessToken: API_KEY
+  accessToken: 1.10.3
 });
 //NEED TO BRING IN THE MAG - HOW TO SORT BY COLOR AND SIZE
 // Initialize all of the LayerGroups we'll be using
@@ -94,13 +94,13 @@ var icons = {
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson", function(infoRes) {
 
   // When the first API call is complete, perform another call to the Citi Bike Station Status endpoint
-  d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_status.json", function(statusRes) {
-    var updatedAt = infoRes.last_updated;
-    var stationStatus = statusRes.data.stations;
-    var stationInfo = infoRes.data.stations;
+  // d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_status.json", function(statusRes) {
+  //   var updatedAt = infoRes.last_updated;
+  //   var stationStatus = statusRes.data.stations;
+  //   var stationInfo = infoRes.data.stations;
 
     // Create an object to keep of the number of markers in each layer
-    var stationCount = {
+    var quakeCount = {
       COMING_SOON: 0,
       EMPTY: 0,
       LOW: 0,
