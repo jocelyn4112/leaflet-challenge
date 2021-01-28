@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Downloads\\Mapping-Web\\unc-peace-data-pt-08-2020-u-c-master-01-Lesson-Plans-16-Mapping-Web\\01-Lesson-Plans\\16-Mapping-Web"
+		},
+		{
+			"path": "..\\..\\.."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "16-Mapping-Web"
+	}
+}
