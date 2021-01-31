@@ -2,6 +2,7 @@ html,
 body,
 #map-id {
   height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -15,9 +16,8 @@ body,
   color: #555;
   background-color: white;
   border-radius: 5px;
-  leaflet.js box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
- /* Change for quakes */
+} 
+
 .legend .low {
   color: #ec8a2e;
 }
@@ -36,8 +36,5 @@ body,
 
 .legend .out-of-order {
   color: #007dff;
-}
+} 
 
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-crossorigin=""></script>
