@@ -1,5 +1,5 @@
 // Create the tile layer that will be the background of our map
-var myMap = L.map("map", {
+var myMap = L.map("mapid", {
   center: [40.7, -73.95],
   zoom: 11
 });

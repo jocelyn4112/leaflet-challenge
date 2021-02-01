@@ -1,6 +1,6 @@
 html,
 body,
-#map-id {
+#mapid {
   height: 100%;
   width: 100%;
   padding: 0;
@@ -38,3 +38,9 @@ body,
   color: #007dff;
 } 
 
+.leaflet-control-container .leaflet-timeline-controls {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 15px;
+}
