@@ -1,9 +1,10 @@
-// Create the tile layer that will be the background of our map
+// Create the tile layer for background and API
 var myMap = L.map("mapid", {
   center: [40.7, -73.95],
-  zoom: 11
+  zoom: 50
 });
 console.log(API_KEY)
+
 // Adding tile layer to the map
 
 var graymap = L.tileLayer(
