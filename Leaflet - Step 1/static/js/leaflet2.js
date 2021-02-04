@@ -29,7 +29,11 @@ var graymap = L.tileLayer(
 //   accessToken: API_KEY
 // })
 
-graymap.addTo(myMap);
+
+// Add Markers to a new group.
+// 
+var cityLayer = L.layerGroup(cityMarkers);
+
 
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson", function(data) {
   console.log(data);
